@@ -1,6 +1,7 @@
-
 body {
-    background: linear-gradient(to right,red, powderblue );
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     font-family: Arial, sans-serif;
 }
 
@@ -13,15 +14,61 @@ body {
     max-width: 400px;
 }
 
-.login-form h2 {
+h2 {
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.btn-primary {
-    background: linear-gradient(to right,red,powderblue);
+.custom-input {
     border: none;
+    border-bottom: 2px solid #ddd;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 10px 0 5px;
+    width: 100%;
+    font-size: 16px;
 }
 
-.btn-primary:hover {
-    background: linear-gradient(to right, red, powderblue);
+.custom-input:focus {
+    border-bottom: 2px solid #6a11cb;
+}
+
+.input-label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #aaa;
+    font-size: 14px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.custom-input:focus + .input-label,
+.custom-input:not(:placeholder-shown) + .input-label {
+    top: -10px;
+    font-size: 12px;
+    color: #6a11cb;
+}
+
+.btn {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+a {
+    color: #6a11cb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
